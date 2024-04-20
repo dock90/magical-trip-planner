@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ApolloWrapper } from "@/apollo-wrapper";
 import "./globals.css";
 
 import classNames from 'clsx';
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className='h-full bg-gray-50' lang="en">
-      <body className={classNames(inter.className, 'h-full')}>{children}</body>
+      <body className={classNames(inter.className, 'h-full')}>
+        <ApolloWrapper>{children}</ApolloWrapper>
+      </body>
     </html>
   );
 }
