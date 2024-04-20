@@ -1,4 +1,5 @@
-import { Layout } from '../components/layout'
+import Link from 'next/link'
+import { Layout } from '@/components/layout'
 
 export default function Home() {
   return (
@@ -16,12 +17,14 @@ export default function Home() {
           >
             Edit
           </button> */}
-          <button
-            type="button"
-            className="ml-3 inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            New Trip
-          </button>
+          <Link href="/new-trip">
+            <button
+              type="button"
+              className="ml-3 inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              New Trip
+            </button>
+          </Link>
         </div>
       </div>
     </Layout>

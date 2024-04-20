@@ -14,7 +14,7 @@ import {
 } from '@heroicons/react/24/outline'
 
 const navigation = [
-    { name: 'My Trips', href: '#', icon: HomeIcon, current: true },
+    { name: 'My Trips', href: '/', icon: HomeIcon, current: true },
     // { name: 'Team', href: '#', icon: UsersIcon, current: false },
     // { name: 'Projects', href: '#', icon: FolderIcon, current: false },
     // { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
@@ -235,7 +235,7 @@ export function Layout({ children }) {
                                             alt=""
                                         />
                                         <span className="sr-only">Your profile</span>
-                                        <span aria-hidden="true">Tom Cook</span>
+                                        <span aria-hidden="true">Edward</span>
                                     </a>
                                 </li>
                             </ul>
