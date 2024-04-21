@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </div>
       <ul role="list" className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8 mt-10">
-        {trips.map((trip) => {
+        {trips.map((trip: any) => {
           const { id, tripTitle, tripSummary } = trip;
 
           return (

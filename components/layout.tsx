@@ -12,6 +12,7 @@ import {
     // UsersIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
+import classNames from 'clsx';
 
 const navigation = [
     { name: 'My Trips', href: '/', icon: HomeIcon, current: true },
@@ -28,11 +29,8 @@ const navigation = [
 //   { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
 // ]
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
 
-export function Layout({ children }) {
+export function Layout({ children }: { children: React.ReactNode }) {
     const [sidebarOpen, setSidebarOpen] = useState(false)
 
     return (
