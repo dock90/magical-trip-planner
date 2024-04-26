@@ -57,38 +57,40 @@ export default function Home() {
           const { id, tripTitle, tripSummary } = trip;
 
           return (
-            <li key={id} className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-              <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
-                {/* <img
-                  src={client.imageUrl}
-                  alt={client.name}
-                  className="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
-                /> */}
-                <div className="text-sm font-medium leading-6 text-gray-900">{tripTitle}</div>
-              </div>
-              {/* <dl className="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm leading-6">
-                <div className="flex justify-between gap-x-4 py-3">
-                  <dt className="text-gray-500">Last invoice</dt>
-                  <dd className="text-gray-700">
-                    <time dateTime={client.lastInvoice.dateTime}>{client.lastInvoice.date}</time>
-                  </dd>
+            <Link key={id} href={`/trip/${id}`}>
+              <li className="overflow-hidden rounded-xl border border-gray-200 bg-white">
+                <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
+                  {/* <img
+                    src={client.imageUrl}
+                    alt={client.name}
+                    className="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
+                  /> */}
+                  <div className="text-sm font-medium leading-6 text-gray-900">{tripTitle}</div>
                 </div>
-                <div className="flex justify-between gap-x-4 py-3">
-                  <dt className="text-gray-500">Amount</dt>
-                  <dd className="flex items-start gap-x-2">
-                    <div className="font-medium text-gray-900">{client.lastInvoice.amount}</div>
-                    <div
-                      className={classNames(
-                        statuses[client.lastInvoice.status],
-                        'rounded-md py-1 px-2 text-xs font-medium ring-1 ring-inset'
-                      )}
-                    >
-                      {client.lastInvoice.status}
-                    </div>
-                  </dd>
-                </div>
-              </dl> */}
-            </li>
+                {/* <dl className="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm leading-6">
+                  <div className="flex justify-between gap-x-4 py-3">
+                    <dt className="text-gray-500">Last invoice</dt>
+                    <dd className="text-gray-700">
+                      <time dateTime={client.lastInvoice.dateTime}>{client.lastInvoice.date}</time>
+                    </dd>
+                  </div>
+                  <div className="flex justify-between gap-x-4 py-3">
+                    <dt className="text-gray-500">Amount</dt>
+                    <dd className="flex items-start gap-x-2">
+                      <div className="font-medium text-gray-900">{client.lastInvoice.amount}</div>
+                      <div
+                        className={classNames(
+                          statuses[client.lastInvoice.status],
+                          'rounded-md py-1 px-2 text-xs font-medium ring-1 ring-inset'
+                        )}
+                      >
+                        {client.lastInvoice.status}
+                      </div>
+                    </dd>
+                  </div>
+                </dl> */}
+              </li>
+            </Link>
           )
         })}
       </ul>
