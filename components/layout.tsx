@@ -7,7 +7,7 @@ import {
     // CalendarIcon,
     // ChartPieIcon,
     // DocumentDuplicateIcon,
-    // FolderIcon,
+    FolderIcon,
     HomeIcon,
     // UsersIcon,
     XMarkIcon,
@@ -15,9 +15,9 @@ import {
 import classNames from 'clsx';
 
 const navigation = [
-    { name: 'My Trips', href: '/', icon: HomeIcon, current: true },
+    { name: 'Home', href: '/', icon: HomeIcon, current: true },
+    { name: 'All Trips', href: '/trips', icon: FolderIcon, current: false },
     // { name: 'Team', href: '#', icon: UsersIcon, current: false },
-    // { name: 'Projects', href: '#', icon: FolderIcon, current: false },
     // { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
     // { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
     // { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
