@@ -25,8 +25,11 @@ export default function Trip({ params }: { params: { id: string } }) {
 
     return (
         <Layout>
-            <div>
-                <h1>{trip.tripTitle}</h1>
+            <div className="border-b border-gray-200 pb-5">
+                <h3 className="text-base font-semibold leading-6 text-gray-900">{trip.tripTitle}</h3>
+                <p className="mt-2 max-w-4xl text-sm text-gray-500">
+                    {trip.tripSummary}
+                </p>
             </div>
         </Layout>
     )

@@ -3,10 +3,12 @@
 import { gql, useMutation } from '@apollo/client';
 import { useState } from 'react';
 import { Layout } from '@/components/layout'
+import { useRouter } from 'next/navigation'
 
 const CREATE_TRIP = gql`
     mutation CreateTrip($input: trips_insert_input!) {
         insert_trips_one(object: $input) {
+            id
             tripTitle
             tripSummary
         }
@@ -19,6 +21,9 @@ export default function NewTrip() {
         tripTitle: '',
         tripSummary: ''
     });
+
+    // hooks
+    const router = useRouter()
 
     // mutations
     const [createTrip, { data, loading, error }] = useMutation(CREATE_TRIP);
@@ -34,11 +39,15 @@ export default function NewTrip() {
         e.preventDefault();
 
         try {
-            await createTrip({
+            const createTripResponse = await createTrip({
                 variables: {
                     input: tripData
                 }
             });
+
+            const { data: { insert_trips_one } } = createTripResponse;
+            router.push(`/trip/${insert_trips_one.id}`)
+
         } catch (error) {
             console.error(error);
         }
